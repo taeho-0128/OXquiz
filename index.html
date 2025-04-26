@@ -24,9 +24,14 @@
       font-size: 20px;
       margin: 12px;
       cursor: pointer;
-      width: 120px;
-      height: 120px;
       border-radius: 20px;
+    }
+    .start-buttons, .result-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
     }
     .ox-buttons {
       display: flex;
@@ -43,7 +48,9 @@
   <div id="start-screen">
     <h1>장애인 인식 개선 OX 퀴즈</h1>
     <p>정답을 모두 맞추신 분께는 선물을 드려요! 🎁</p>
-    <button onclick="startQuiz()">시작하기</button>
+    <div class="start-buttons">
+      <button onclick="startQuiz()">시작하기</button>
+    </div>
   </div>
 
   <div id="quiz-screen" class="hidden">
@@ -66,8 +73,9 @@
       당신은 <span id="score"></span>/5 문제를 맞췄습니다! 🎉
       <div id="congrats-message" class="hidden">축하드립니다! 🎁 선물을 받아가세요!</div>
     </div>
-    <br />
-    <button onclick="restartQuiz()">다시 하기</button>
+    <div class="result-buttons">
+      <button onclick="restartQuiz()">다시 하기</button>
+    </div>
   </div>
 
   <script>
